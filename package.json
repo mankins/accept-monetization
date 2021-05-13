@@ -1,0 +1,31 @@
+{
+  "name": "accept-payment",
+  "version": "1.0.0",
+  "description": "example accept-payment",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mankins/accept-payment.git"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/mankins/accept-payment/issues"
+  },
+  "homepage": "https://github.com/mankins/accept-payment#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "parse-accepts": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
