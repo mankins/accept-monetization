@@ -84,6 +84,10 @@ npm install
 npm run start
 ```
 
+# Resources
+
+- [Is it time for the 402 status code and Accept-Payment?](https://www.notion.so/Is-it-time-for-the-402-status-code-and-Accept-Payment-513ede526d954e6f81f01c13a144e26a)
+
 # Contact
 
 Matt Mankins <mankins@mozillafoundation.org>
