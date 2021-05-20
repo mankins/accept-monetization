@@ -1,7 +1,7 @@
 {
-  "name": "accept-payment",
+  "name": "accept-monetization",
   "version": "1.0.0",
-  "description": "example accept-payment",
+  "description": "example accept-monetization",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mankins/accept-payment.git"
+    "url": "git+https://github.com/mankins/accept-monetization.git"
   },
   "author": "",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/mankins/accept-payment/issues"
+    "url": "https://github.com/mankins/accept-monetization/issues"
   },
-  "homepage": "https://github.com/mankins/accept-payment#readme",
+  "homepage": "https://github.com/mankins/accept-monetization#readme",
   "dependencies": {
     "express": "^4.17.1",
     "marked": "^2.0.3",

@@ -21,12 +21,12 @@ app.all('/headers', async (req, res) => {
   res.send({ headers });
 });
 
-app.all('/accept-payment', async (req, res) => {
+app.all('/accept-monetization', async (req, res) => {
   const { headers } = req;
-  const acceptPayment = headers['accept-payment'] || '';
+  const acceptMonetization = headers['accept-monetization'] || '';
 
-  if (acceptPayment) {
-    const parsed = parse(acceptPayment);
+  if (acceptMonetization) {
+    const parsed = parse(acceptMonetization);
     res.send({ parsed });
     return;
   } else {
@@ -39,11 +39,11 @@ app.all('/accept-payment', async (req, res) => {
 
 app.all('/ads/required', async (req, res) => {
   const { headers } = req;
-  const acceptPayment = headers['accept-payment'] || '';
+  const acceptMonetization = headers['accept-monetization'] || '';
 
   const lookingFor = 'ads';
 
-  const parsed = parse(acceptPayment) || [];
+  const parsed = parse(acceptMonetization) || [];
   let found = false;
   parsed.forEach((type) => {
     if (type.value && type.value.indexOf(lookingFor) !== -1) {
@@ -60,18 +60,18 @@ app.all('/ads/required', async (req, res) => {
   res.status(402);
   res.send(
     page(
-      '<h1>Missing Payment: 402 Payment Required</h1><p>Accept-payment: ads/* not found</p>',
+      '<h1>Missing Payment: 402 Payment Required</h1><p>accept-monetization: ads/* not found</p>',
     ),
   );
 });
 
 app.all('/webmon/required', async (req, res) => {
   const { headers } = req;
-  const acceptPayment = headers['accept-payment'] || '';
+  const acceptMonetization = headers['accept-monetization'] || '';
 
   const lookingFor = 'webmon';
 
-  const parsed = parse(acceptPayment) || [];
+  const parsed = parse(acceptMonetization) || [];
   let found = false;
   parsed.forEach((type) => {
     if (type.value && type.value.indexOf(lookingFor) !== -1) {
@@ -88,7 +88,7 @@ app.all('/webmon/required', async (req, res) => {
   res.status(402);
   res.send(
     page(
-      '<h1>Missing Payment: 402 Payment Required</h1><p>Accept-payment: webmon/* not found</p>',
+      '<h1>Missing Payment: 402 Payment Required</h1><p>accept-monetization: webmon/* not found</p>',
     ),
   );
 });
@@ -98,7 +98,7 @@ const page = (body) => {
     <h2>Pages</h2>
           <ul>
        <li><a href="/headers">Inspect headers</a></li>
-       <li><a href="/accept-payment">Parse Accept-Payment</a></li>
+       <li><a href="/accept-monetization">Parse accept-monetization</a></li>
        <li><a href="/webmon/required">Look for Web Monetization</a></li>
        <li><a href="/ads/required">Look for Ads</a></li>
        <li><a href="/">Overview</a></li>
@@ -108,7 +108,7 @@ const page = (body) => {
 app.all('/', (req, res) => {
   const { headers } = req;
 
-  if (headers['accept-payment']) {
+  if (headers['accept-monetization']) {
     res.send(page('<h1>Payment Accept Header Found. Ok.</h1>'));
   } else {
     res.status(402);
@@ -117,5 +117,5 @@ app.all('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`accept-payment on http://localhost:${PORT}/`);
+  console.log(`accept-monetization on http://localhost:${PORT}/`);
 });
