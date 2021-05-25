@@ -86,7 +86,8 @@ npm run start
 
 # Video Overview
 
-`youtube: https://www.youtube.com/watch?v=8_xzL2dTy7o`
+[![YouTube Presentation](https://github.com/mankins/accept-monetization/blob/main/static/youtube_thumb.png)](https://www.youtube.com/watch?v=8_xzL2dTy7o "YouTube Presentation")
+
 
 # Resources
 
