@@ -84,6 +84,10 @@ npm install
 npm run start
 ```
 
+# Video Overview
+
+`youtube: https://www.youtube.com/watch?v=8_xzL2dTy7o`
+
 # Resources
 
 - [Is it time for the 402 status code and accept-monetization?](https://www.notion.so/Is-it-time-for-the-402-status-code-and-accept-monetization-513ede526d954e6f81f01c13a144e26a)
